@@ -8,6 +8,8 @@ import { calculateWinner } from './winner';
 import StatusMessage from './Components/StatusMessage';
 import History from './Components/History';
 
+const NEW_GAME = [{ squares: Array(9).fill(null), isXNext: false }];
+
 function App() {
   //   const [counter, setCounter] = useState(1);
 
@@ -20,9 +22,7 @@ function App() {
   //     });
   //   };
 
-  const [history, setHistory] = useState([
-    { squares: Array(9).fill(null), isXNext: false },
-  ]);
+  const [history, setHistory] = useState(NEW_GAME);
 
   const [currentMove, setCurrentMove] = useState(0);
   // const [squares, setSquares] = useState(Array(9).fill(null));
